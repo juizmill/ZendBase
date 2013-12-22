@@ -3,7 +3,6 @@ namespace ZendBase;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
-use ZendBase\Form\GenerateForm;
 
 class Module
 {
@@ -34,8 +33,8 @@ class Module
     {
         return array(
             'factories' => array(
-                'ZendBase.Db' => function($sm){
-                        return $sm->get('Zend\Db\Adapter\Adapter');
+                'ZendBase.Form' => function($sm){
+                    return $sm->get('Zend\Db\Adapter\Adapter');
                 },
             )
         );
